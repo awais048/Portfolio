@@ -158,7 +158,7 @@ section h2 {
 }
 .about .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     justify-content: center;
 }
@@ -231,10 +231,14 @@ section h2 {
 
 /* Skills Section */
 .skills {
-    padding: 60px 0px;
+    padding: 60px 20px;
     background-color: #0A283F;
     text-align: center;
     
+}
+
+.skills .container{
+    padding: 0 auto;
 }
 
 .skill-grid {
