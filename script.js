@@ -101,20 +101,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
     const body = document.body;
 
     navLinks.classList.toggle('active'); // Show/hide the menu
-    body.classList.toggle('no-scroll'); // Prevent/allow scrolling
+    hamburger.classList.toggle('active'); // Animate hamburger icon
+    body.classList.toggle('no-scroll'); // Prevent background scrolling
 }
 
 // Hide menu when a link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
         const body = document.body;
 
         if (navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
             body.classList.remove('no-scroll');
         }
     });
