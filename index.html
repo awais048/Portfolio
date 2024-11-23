@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Awais Shaikh, Software Engineer">
+    <title>Portfolio - Awais Shaikh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">Awais Shaikh</h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#organizations">Organizations</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Hi, I'm <span class="highlight"></span></h2>
+                <p>Software Engineer | Full-Stack Web Developer | React & PHP Enthusiast | Problem Solver & Effective Communicator</p>
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="Resume.pdf" class="btn" target="_blank">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="dp"><img src="awais.jpeg" alt="Awais" width="150px" height="150px" style="border-radius: 50%;"></div>
+            <p>
+                Passionate Software Engineer with a B.E. in Software Engineering from Mehran University of Engineering and Technology (MUET) Jamshoro. Experienced in web development and full-stack application building using technologies such as React.js, PHP, MySQL, HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3>B.E in Software Engineering</h3>
+                <p>Mehran University of Engineering and Technology (MUET), Jamshoro</p>
+                <p>December 2020 - December 2024</p>
+                <p><strong>Thesis:</strong> Digital School Management System - A PHP, MySQL, HTML, CSS, JavaScript web app with dashboards for admins, teachers, and students.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="padding">
+                <div class="experience-card">
+                    <h3>Web Developer (Intern)</h3>
+                    <p>CodeSoft</p>
+                    <p>April 2024 - May 2024</p>
+                    <p>Gained hands-on experience in modern web technologies including HTML, CSS, JavaScript, and PHP.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Director of Management</h3>
+                    <p>Google Developer Student Club MUET</p>
+                    <p>September 2022 - October 2023</p>
+                    <p>Organized events and workshops to foster tech skills among students and managed logistics for smooth execution.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Director of Management</h3>
+                    <p>Rah-e-Ilahi</p>
+                    <p>October 2023 - April 2024</p>
+                    <p>Led awareness sessions promoting social responsibility among students and coordinated event planning and execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-php"></i>
+                    <h3>PHP</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cplusplus"></i>
+                    <h3>C++</h3>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="assets/projects/DSMS/Screenshot 2024-10-21 233801.png" alt="Digital School Management System">
+                <div class="padding">
+                    <h3>Digital School Management System</h3>
+                <p>A PHP, MySQL, HTML, CSS, and JavaScript web app offering dashboards for admins, teachers, and students. Features include library, attendance, and results management with real-time updates using AJAX.</p>
+                <a href="#" class="btn">View Website</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/projects/LS/Screenshot 2024-11-18 225810.png" alt="LifeSparkle Blogging Website">
+                <div class="padding">
+                    <h3>LifeSparkle (Blogging Website)</h3>
+                <p>A responsive React.js-based blogging site with categories such as fashion, tech, and lifestyle. The design is optimized for mobile and desktop viewing.</p>
+                <a href="https://lifesparkle.pages.dev/" class="btn">View Website</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/projects/HC/Screenshot 2024-10-17 025354.png" alt="Health Tracking System">
+                <div class="padding"><h3>Health Tracking System</h3>
+                    <p>A PHP and MySQL-based health tracking application that logs vital stats like blood pressure and sugar levels. Includes reminders for medications and appointments, with real-time updates using AJAX and data visualization with Chart.js.</p>
+                    <a href="#" class="btn">View Website</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Organizations Section -->
+    <section id="organizations" class="organizations">
+        <div class="container">
+            <h2>Organizations</h2>
+                <div class="organization-card">
+                    <h3>Google Developer Student Club MUET</h3>
+                    <p>Role: Director of Management</p>
+                    <p>September 2022 - October 2023</p>
+                </div>
+                <div class="organization-card">
+                    <h3>Rah-e-Ilahi</h3>
+                    <p>Role: Director of Management</p>
+                    <p>October 2023 - April 2024</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>Certificates</h2>
+            <div class="certificate-card">
+                <h3>National Freelance Training Program (NFTP)</h3>
+                <p>Web Development: HTML, CSS, JavaScript, PHP, MySQL</p>
+                <p>November 2022 - February 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/awais-shaikh-8bb730232/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/awais048"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/awais.shaikh_/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/awais.shaikh.9638718"><i class="fab fa-facebook"></i></a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Awais Shaikh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
