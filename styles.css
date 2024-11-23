@@ -735,7 +735,7 @@ section.reveal {
         width: 100%;
         height: calc(100vh - 60px);
         overflow-y: auto;
-        padding: 20px 0;
+        padding: 40px 0;
         transition: all 0.3s ease;
     }
 
