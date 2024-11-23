@@ -243,25 +243,10 @@ section h2 {
 
 .skill-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    overflow-x: scroll;
     padding: 20px 0; /* Add some vertical padding */
-    scroll-snap-type: x mandatory; /* Enable snap scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-}
-
-.skill-grid::-webkit-scrollbar {
-    height: 8px; /* Set the height of the scrollbar */
-}
-
-.skill-grid::-webkit-scrollbar-thumb {
-    background-color: #64FFDA;
-    border-radius: 4px;
-}
-
-.skill-grid::-webkit-scrollbar-thumb:hover {
-    background-color: #64FFDA;
 }
 
 .skill-card {
@@ -606,7 +591,6 @@ section.reveal {
 
     .skill-grid {
         flex-wrap: wrap;
-        overflow-x: visible;
     }
 }
 
@@ -679,11 +663,6 @@ section.reveal {
 
     .project-grid {
         grid-template-columns: 1fr;
-    }
-
-    .skill-grid {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
     }
 
     .contact form {
