@@ -41,36 +41,33 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Hero Section Animation: Erase and Rewrite Name
-const heroText = document.querySelector('.highlight');
-const nameArray = ["Awais Shaikh"];
-let currentIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const typingSpeed = 100;
-const erasingSpeed = 100;
-const delayBetweenTyping = 1000; // Delay before erasing and rewriting
+const texts = ["Software Engineer", "Full-Stack Developer", "React Enthusiast"];
+let i = 0;
 
-function typeHeroText() {
-    if (charIndex < nameArray[currentIndex].length && !isDeleting) {
-        // Add character
-        heroText.textContent += nameArray[currentIndex][charIndex];
-        charIndex++;
-        setTimeout(typeHeroText, typingSpeed);
-    } else if (charIndex > 0 && isDeleting) {
-        // Remove character
-        heroText.textContent = heroText.textContent.slice(0, -1);
-        charIndex--;
-        setTimeout(typeHeroText, erasingSpeed);
-    } else {
-        // Pause and toggle typing/deleting state
-        isDeleting = !isDeleting;
-        setTimeout(typeHeroText, delayBetweenTyping);
-    }
+function updateText() {
+    const highlight = document.getElementById("animated-highlight");
+    
+    // Fade out the text
+    highlight.classList.add("fade-out");
+    setTimeout(() => {
+        // Change the text
+        highlight.textContent = texts[i];
+        i = (i + 1) % texts.length;
+
+        // Fade in the text
+        highlight.classList.remove("fade-out");
+        highlight.classList.add("fade-in");
+
+        // Remove the fade-in class after animation
+        setTimeout(() => {
+            highlight.classList.remove("fade-in");
+        }, 1000);
+    }, 1000); // Match fade-out duration
 }
 
-// Initialize Hero Text Animation
-typeHeroText();
+// Call the function every 3 seconds
+setInterval(updateText, 3000);
+
 
 // Scroll Reveal Animation for Sections
 const sections = document.querySelectorAll('section');
@@ -123,3 +120,4 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         }
     });
 });
+
