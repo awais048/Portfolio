@@ -146,36 +146,29 @@ a {
 /* Section Titles with Moving Slash Effect */
 section h2 {
     position: relative;
+text-align: center;
+font-size: 2.5rem;
+color: transparent; /* Make the text color transparent */
+background-image: linear-gradient(to right, #ffffff, #ffffff); /* Light black to white gradient */
+margin-bottom: 40px;
+font-weight: bold;
+letter-spacing: 1.5px;
+overflow: hidden;
+-webkit-background-clip: text; /* Apply the gradient to the text */
+background-clip: text; /* For other browsers */
+
+}
+
+
+#white{
+    position: relative;
     text-align: center;
     font-size: 2.5rem;
     color: #f3efef; /* Dark heading color */
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: bold;
     letter-spacing: 1.5px;
     overflow: hidden;
-}
-
-/* Moving Slash Effect */
-section h2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%; /* Start outside the text */
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, transparent 45%, rgba(255, 255, 255, 0.3) 50%, transparent 55%);
-    animation: slash-effect 2s linear infinite;
-    mix-blend-mode: screen; /* Ensures it only affects the text */
-}
-
-/* Animation for Slash */
-@keyframes slash-effect {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
 }
 
 
@@ -334,37 +327,27 @@ section h2::after {
     text-align: center;
 }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
-}
 
-.contact input, .contact textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #112240;
-    color: #E6F1FF;
-}
-
-.contact button {
-    background: #64FFDA;
-    color: #0A192F;
+.whatsapp-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 16px;
     font-weight: bold;
-    border: none;
-    padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.contact button:hover {
-    background: #52D2B1;
+.whatsapp-link i {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
+.whatsapp-link:hover {
+    background-color: #128C7E;
+}
 .social-links {
     margin-top: 20px;
 }
