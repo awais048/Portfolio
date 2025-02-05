@@ -121,3 +121,42 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// JavaScript for scroll animation
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutSection = document.querySelector('.about');
+    const container = document.querySelector('.about .container');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                container.classList.add('visible');
+                aboutSection.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.3 // Trigger when 30% of section is visible
+    });
+
+    observer.observe(aboutSection);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.querySelector("#about");
+    const experienceSection = document.querySelector("#experience");
+
+    window.addEventListener("scroll", function () {
+        const aboutRect = aboutSection.getBoundingClientRect();
+        if (aboutRect.top < window.innerHeight && aboutRect.bottom > 0) {
+            aboutSection.classList.add("visible");
+        } else {
+            aboutSection.classList.remove("visible");
+        }
+        
+        const experienceRect = experienceSection.getBoundingClientRect();
+        if (experienceRect.top < window.innerHeight && experienceRect.bottom > 0) {
+            experienceSection.classList.add("visible");
+        } else {
+            experienceSection.classList.remove("visible");
+        }
+    });
+});
