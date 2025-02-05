@@ -47,7 +47,6 @@
         </div>
     </section>
 <!-- About Section -->
-<div class="fixed-bg"></div>
 <section id="about" class="about">
     <div class="container">
         <h2>About Me</h2>
@@ -58,46 +57,100 @@
     </div>
 </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-card">
-                <h3>B.E in Software Engineering</h3>
-                <p>Mehran University of Engineering and Technology (MUET), Jamshoro</p>
-                <p>December 2020 - December 2024</p>
-                <p><strong>Thesis:</strong> Digital School Management System - A PHP, MySQL, HTML, CSS, JavaScript web app with dashboards for admins, teachers, and students.</p>
-            </div>
-        </div>
-    </section>
+<!-- Education Section -->
+<section id="education" class="education">
+    <div class="container">
+        <h2>Education</h2>
 
-    <!-- Experience Section -->
-    <div class="experience-bg"></div>
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="padding">
-                <div class="experience-card">
-                    <h3>Web Developer (Intern)</h3>
-                    <p>CodeSoft</p>
-                    <p>April 2024 - May 2024</p>
-                    <p>Gained hands-on experience in modern web technologies including HTML, CSS, JavaScript, and PHP.</p>
-                </div>
-                <div class="experience-card">
-                    <h3>Director of Management</h3>
-                    <p>Google Developer Student Club MUET</p>
-                    <p>September 2022 - October 2023</p>
-                    <p>Organized events and workshops to foster tech skills among students and managed logistics for smooth execution.</p>
-                </div>
-                <div class="experience-card">
-                    <h3>Director of Management</h3>
-                    <p>Rah-e-Ilahi</p>
-                    <p>October 2023 - April 2024</p>
-                    <p>Led awareness sessions promoting social responsibility among students and coordinated event planning and execution.</p>
-                </div>
+        <!-- Graduation -->
+        <div class="education-card">
+            <h3>B.E in Software Engineering</h3>
+            <p>Mehran University of Engineering and Technology (MUET), Jamshoro</p>
+            <p>December 2020 - December 2024</p>
+            <p><strong>Thesis:</strong> Digital School Management System - A PHP, MySQL, HTML, CSS, JavaScript web app with dashboards for admins, teachers, and students.</p>
+            <div class="documents">
+                <p><strong>Documents:</strong></p>
+                <button class="view-doc" data-img="assets/docs/transcript.jpg">Transcript</button>
+                <button class="view-doc" data-img="assets/docs/muet degree.jpg">Degree</button>
+                <button class="view-doc" data-img="assets/docs/mehran pass.jpg">Pass Certificate</button>
             </div>
         </div>
-    </section>
+
+        <!-- Intermediate -->
+        <div class="education-card">
+            <h3>Intermediate (Pre-Engineering)</h3>
+            <p>The Navigator Science School & College, Thatta</p>
+            <p>BISEH Hyderabad | 2019 - 2020 | Grade: A1</p>
+            <div class="documents">
+                <p><strong>Documents:</strong></p>
+                <button class="view-doc" data-img="assets/docs/inter marks.jpg">Marksheet</button>
+                <button class="view-doc" data-img="assets/docs/Inter pass.jpg">Pass Certificate</button>
+            </div>
+        </div>
+
+        <!-- Matriculation -->
+        <div class="education-card">
+            <h3>Matriculation (Science)</h3>
+            <p>Government Boys High School, Sujawal</p>
+            <p>BISEH Hyderabad | 2017 - 2018 | Grade: A</p>
+            <div class="documents">
+                <p><strong>Documents:</strong></p>
+                <button class="view-doc" data-img="assets/docs/matric marks.jpg">Marksheet</button>
+                <button class="view-doc" data-img="assets/docs/matric pass.jpg">Pass Certificate</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal for Viewing Documents -->
+<div id="docModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="docImage">
+</div>
+
+   <!-- Experience Section -->
+<div class="experience-bg"></div>
+<section id="experience" class="experience">
+    <div class="container">
+        <h2>Work Experience</h2>
+        <div class="padding">
+            <!-- Web Developer Intern -->
+            <div class="experience-card">
+                <h3>Web Developer (Intern)</h3>
+                <p>CodeSoft</p>
+                <p>April 2024 - May 2024</p>
+                <p>Gained hands-on experience in modern web technologies including HTML, CSS, JavaScript, and PHP.</p>
+                <button class="view-cert" data-cert="assets/docs/codsoft.png">View Certificate</button>
+            </div>
+
+            <!-- Director of Management - GDSC MUET -->
+            <div class="experience-card">
+                <h3>Director of Management</h3>
+                <p>Google Developer Student Club MUET</p>
+                <p>September 2022 - October 2023</p>
+                <p>Organized events and workshops to foster tech skills among students and managed logistics for smooth execution.</p>
+                <button class="view-cert" data-cert="assets/docs/gdsc.png">View Certificate</button>
+            </div>
+
+            <!-- Director of Management - Rah-e-Ilahi -->
+            <div class="experience-card">
+                <h3>Director of Management</h3>
+                <p>Rah-e-Ilahi</p>
+                <p>October 2023 - April 2024</p>
+                <p>Led awareness sessions promoting social responsibility among students and coordinated event planning and execution.</p>
+                <button class="view-cert" data-cert="assets/docs/raheilahi.jpg">View Certificate</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Viewing Certificates -->
+<div id="certModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="certImage">
+</div>
+
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -190,17 +243,38 @@
             </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates">
-        <div class="container">
-            <h2>Certificates</h2>
-            <div class="certificate-card">
-                <h3>National Freelance Training Program (NFTP)</h3>
-                <p>Web Development: HTML, CSS, JavaScript, PHP, MySQL</p>
-                <p>November 2022 - February 2023</p>
-            </div>
+   <!-- Certificates Section -->
+<section id="certificates" class="certificates">
+    <div class="container">
+        <h2>Certificates</h2>
+
+        <!-- National Freelance Training Program (NFTP) Certificate -->
+        <div class="certificate-card">
+            <h3>National Freelance Training Program (NFTP)</h3>
+            <p>Web Development: HTML, CSS, JavaScript, PHP, MySQL</p>
+            <p>November 2022 - February 2023</p>
+            <button class="view-cert" data-cert="assets/docs/nftp.png">View Certificate</button>
         </div>
-    </section>
+
+        <!-- English Language Course Certificate -->
+        <div class="certificate-card">
+            <h3>English Language (1st level to 4th level, Drafting, Grammar)</h3>
+            <p>Idea English Language and Computer Academy, Sujawal</p>
+            <p>1st August 2017 - 10th April 2018</p>
+            <button class="view-cert" data-cert="assets/docs/language.jpg">View Certificate</button>
+        </div>
+
+        <!-- Computer Course Certificate -->
+        <div class="certificate-card">
+            <h3>Computer Course (MS Office, Adobe Photoshop, Hardware, Software)</h3>
+            <p>Idea English Language and Computer Academy, Sujawal</p>
+            <p>1st May 2017 - 30th October 2017</p>
+            <button class="view-cert" data-cert="assets/docs/computer.jpg">View Certificate</button>
+        </div>
+
+    </div>
+</section>
+
 
    <!-- Contact Section -->
 <section id="contact" class="contact">

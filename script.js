@@ -160,3 +160,85 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let modal = document.getElementById('docModal');
+    let modalImg = document.getElementById('docImage');
+    let closeModal = document.querySelector('.close');
+
+    document.querySelectorAll('.view-doc').forEach(button => {
+        button.addEventListener('click', function() {
+            let imgSrc = this.getAttribute('data-img');
+            modalImg.src = imgSrc;
+            modal.style.display = "flex";  // Show the modal when a button is clicked
+        });
+    });
+
+    // Close modal when close button is clicked
+    closeModal.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Ensure modal is hidden when the page loads
+    modal.style.display = "none";
+});
+
+// JavaScript for Certificate Modal
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("certModal");
+    const modalImg = document.getElementById("certImage");
+    const closeBtn = document.querySelector("#certModal .close"); // Ensure correct selection
+
+    document.querySelectorAll(".view-cert").forEach(button => {
+        button.addEventListener("click", function () {
+            const certSrc = this.getAttribute("data-cert");
+            modalImg.src = certSrc;
+            modal.style.display = "flex"; // Show modal
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside the image
+    modal.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+});
+// JavaScript for Certificate Modal
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("certModal");
+    const modalImg = document.getElementById("certImage");
+    const closeBtn = document.querySelector("#certModal .close"); // Ensure correct selection
+
+    document.querySelectorAll(".view-cert").forEach(button => {
+        button.addEventListener("click", function () {
+            const certSrc = this.getAttribute("data-cert");
+            modalImg.src = certSrc;
+            modal.style.display = "flex"; // Show modal
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside the image
+    modal.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+});
